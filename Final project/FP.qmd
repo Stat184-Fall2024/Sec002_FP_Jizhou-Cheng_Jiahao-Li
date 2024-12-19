@@ -102,9 +102,13 @@ ggplot(eye_distribution, aes(x = eye, y = count, fill = company)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-### Chi-Square Test for Eye Color
+### Pearson's Chi-Square Test for Eye Color
 
-To determine whether the eye color distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+Objective: To determine whether the eye color distributions between Marvel and DC characters differ significantly and whether the likelihood of eye color categories is the same for both companies.
+
+-Null Hypothesis (H₀): The eye color distributions for Marvel and DC characters are the same.
+-Alternative Hypothesis (H₁): The eye color distributions for Marvel and DC characters are different.
+-Significance Level (α): 0.05
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Contingency table for eye color and company
@@ -120,6 +124,13 @@ eye_test
 eye_test$expected
 ```
 
+#### **Process:**
+1.Assume the eye color distributions for Marvel and DC characters are the same (H₀).
+2.Perform Pearson's Chi-squared test to analyze the distribution differences.
+3.Evaluate the p-value from the test:
+-If p-value < 0.05, reject H₀, indicating a significant difference.
+-If p-value ≥ 0.05, do not reject H₀, indicating no significant difference.
+
 #### **Results:**
 
 -   **Chi-Square Statistic**: 387.13
@@ -130,7 +141,7 @@ eye_test$expected
 
 #### **Conclusion:**
 
-The p-value is significantly less than 0.05, indicating that the differences in eye color distributions between Marvel and DC are statistically significant. This suggests that the two companies have distinct creative strategies for character eye color, with Marvel showing a broader range of unique eye colors compared to DC.
+Since the p-value is extremely small (p < 0.05), we reject the null hypothesis. Therefore, we conclude that the eye color distributions between Marvel and DC characters differ significantly.
 
 ------------------------------------------------------------------------
 
@@ -157,9 +168,13 @@ ggplot(align_distribution, aes(x = align, y = count, fill = company)) +
   labs(title = "Characters with the Most Common Alignment: Bad Characters in Marvel and DC", x = "Alignment", y = "Count")
 ```
 
-### Chi-Square Test for Alignment
+### Pearson's Chi-Square Test for Alignment
 
-To determine whether the alignment distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+Objective: To determine whether the alignment distributions between Marvel and DC characters differ significantly and whether the likelihood of alignment categories is the same for both companies.
+
+-Null Hypothesis (H₀): The alignment distributions for Marvel and DC characters are the same.
+-Alternative Hypothesis (H₁): The alignment distributions for Marvel and DC characters are different.
+-Significance Level (α): 0.05
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Contingency table for alignment and company
@@ -175,6 +190,13 @@ align_test
 align_test$expected
 ```
 
+#### **Process:**
+1.Assume the alignment distributions for Marvel and DC characters are the same (H₀).
+2.Perform Pearson's Chi-squared test to analyze the distribution differences.
+3.Evaluate the p-value from the test:
+-If p-value < 0.05, reject H₀, indicating a significant difference.
+-If p-value ≥ 0.05, do not reject H₀, indicating no significant difference.
+
 #### **Results:**
 
 -   **Chi-Square Statistic**: 604.86
@@ -185,7 +207,7 @@ align_test$expected
 
 #### **Conclusion:**
 
-The alignment distribution also shows significant differences between Marvel and DC characters. Marvel tends to have more characters with neutral and diverse alignments, while DC shows a stronger focus on traditional "good" and "evil" characters.
+Since the p-value is extremely small (p < 0.05), we reject the null hypothesis. Therefore, we conclude that the alignment distributions between Marvel and DC characters differ significantly.
 
 ------------------------------------------------------------------------
 
@@ -212,9 +234,12 @@ ggplot(gender_distribution, aes(x = sex, y = count, fill = company)) +
   labs(title = "Characters with the Most Common Gender: Male Characters in Marvel and DC", x = "Gender", y = "Count")
 ```
 
-### Chi-Square Test for Gender
+### Pearson's Chi-Square Test for Gender
 
-To determine whether the gender distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+Objective: To determine whether the gender distributions between Marvel and DC characters differ significantly and whether the likelihood of gender categories is the same for both companies.
+-Null Hypothesis (H₀): The gender distributions for Marvel and DC characters are the same.
+-Alternative Hypothesis (H₁): The gender distributions for Marvel and DC characters are different.
+-Significance Level (α): 0.05
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Contingency table for gender and company
@@ -230,6 +255,13 @@ gender_test
 gender_test$expected
 ```
 
+#### **Process:**
+1.Assume the gender distributions for Marvel and DC characters are the same (H₀).
+2.Perform Pearson's Chi-squared test to analyze the distribution differences.
+3.Evaluate the p-value from the test:
+-If p-value < 0.05, reject H₀, indicating a significant difference.
+-If p-value ≥ 0.05, do not reject H₀, indicating no significant difference.
+
 #### **Results:**
 
 -   **Chi-Square Statistic**: 255.67
@@ -240,7 +272,7 @@ gender_test$expected
 
 #### **Conclusion:**
 
-The gender distribution analysis reveals significant statistical differences between Marvel and DC. While both companies have a predominance of male characters, Marvel includes slightly more non-binary and diverse gender representations than DC.
+Since the p-value is extremely small (p < 0.05), we reject the null hypothesis. Therefore, we conclude that the gender distributions between Marvel and DC characters differ significantly.
 
 # Summary and Conclusions
 
@@ -262,9 +294,9 @@ Marvel demonstrates a greater emphasis on diversity in eye color, alignment, and
 
 # References
 
--   Data source: [FiveThirtyEight Comic Characters](https://github.com/fivethirtyeight/data/tree/master/comic-characters).
--   Marvel data: [Marvel Wikia](https://marvel.wikia.com/)
--   DC data: [DC Wikia](https://dc.wikia.com/)
+-   Data source: jayb.fivethirtyeight. [FiveThirtyEight Comic Characters](https://github.com/fivethirtyeight/data/tree/master/comic-characters).
+-   Marvel data: By Fandom team. [Marvel Wikia](https://marvel.wikia.com/)
+-   DC data: By Fandom team. [DC Wikia](https://dc.wikia.com/)
 
 # Appendix
 
