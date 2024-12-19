@@ -98,7 +98,7 @@ knitr::kable(eye_distribution, caption = "Eye Color Distribution by Company")
 ggplot(eye_distribution, aes(x = eye, y = count, fill = company)) +
   geom_bar(stat = "identity", position = "dodge") +
   geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
-  labs(title = "Marvel and DC Characters: Blue Eyes Are Most Common", x = "Eye Color", y = "Count") +
+  labs(title = "Characters with the Most Common Eye Color: Blue Eyes in Marvel and DC", x = "Eye Color", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
@@ -122,7 +122,30 @@ knitr::kable(align_distribution, caption = "Alignment Distribution by Company")
 ggplot(align_distribution, aes(x = align, y = count, fill = company)) +
   geom_bar(stat = "identity", position = "dodge") +
   geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
-  labs(title = "Marvel and DC Characters: Good Characters Are Most Common", x = "Alignment", y = "Count")
+  labs(title = "Characters with the Most Common Alignment: Good Characters in Marvel and DC", x = "Alignment", y = "Count")
+```
+
+## Gender Distribution
+
+### Table: Gender Distribution
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gender_distribution <- cleaned_data %>%
+  group_by(company, sex) %>%
+  summarise(count = n(), .groups = "drop")
+
+# Table
+knitr::kable(gender_distribution, caption = "Gender Distribution by Company")
+```
+
+### Chart: Characters with the Most Common Gender: Male Characters in Marvel and DC
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Plot gender distribution with labels
+ggplot(gender_distribution, aes(x = sex, y = count, fill = company)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
+  labs(title = "Characters with the Most Common Gender: Male Characters in Marvel and DC", x = "Gender", y = "Count")
 ```
 
 ### Chi-Square Test for Alignment
@@ -149,31 +172,6 @@ align_test$expected
 
 **Conclusion**: Since the p-value is extremely small, we reject the null hypothesis. The alignment distributions between Marvel and DC characters are statistically significant.
 
-------------------------------------------------------------------------
-
-## Gender Distribution
-
-### Table: Gender Distribution
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gender_distribution <- cleaned_data %>%
-  group_by(company, sex) %>%
-  summarise(count = n(), .groups = "drop")
-
-# Table
-knitr::kable(gender_distribution, caption = "Gender Distribution by Company")
-```
-
-### Chart: Characters with the Most Common Gender: Male Characters in Marvel and DC
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# Plot gender distribution with labels
-ggplot(gender_distribution, aes(x = sex, y = count, fill = company)) +
-  geom_bar(stat = "identity", position = "dodge") +
-  geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
-  labs(title = "Marvel and DC Characters: Male Characters Are Most Common", x = "Gender", y = "Count")
-```
-
 # Summary and Conclusions
 
 ### Key Observations
@@ -194,7 +192,7 @@ Marvel demonstrates a greater emphasis on diversity in eye color, alignment, and
 
 # References
 
--   Data source: [FiveThirtyEight Comic Characters](https://github.com/fivethirtyeight/data/tree/master/comic-characters)
+-   Data source: [FiveThirtyEight Comic Characters](https://github.com/fivethirtyeight/data/tree/master/comic-characters).
 -   Marvel data: [Marvel Wikia](https://marvel.wikia.com/)
 -   DC data: [DC Wikia](https://dc.wikia.com/)
 
