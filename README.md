@@ -1,3 +1,4 @@
+
 ---
 title: "Comparison of Marvel and DC Characters"
 author: "Team Members: [Jizhou Cheng, Jiahao Li]"
@@ -115,14 +116,14 @@ align_distribution <- cleaned_data %>%
 knitr::kable(align_distribution, caption = "Alignment Distribution by Company")
 ```
 
-### Chart: Characters with the Most Common Alignment: Good Characters in Marvel and DC
+### Chart: Characters with the Most Common Alignment: Bad Characters in Marvel and DC
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Plot alignment with labels
 ggplot(align_distribution, aes(x = align, y = count, fill = company)) +
   geom_bar(stat = "identity", position = "dodge") +
   geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
-  labs(title = "Characters with the Most Common Alignment: Good Characters in Marvel and DC", x = "Alignment", y = "Count")
+  labs(title = "Characters with the Most Common Alignment: Bad Characters in Marvel and DC", x = "Alignment", y = "Count")
 ```
 
 ## Gender Distribution
