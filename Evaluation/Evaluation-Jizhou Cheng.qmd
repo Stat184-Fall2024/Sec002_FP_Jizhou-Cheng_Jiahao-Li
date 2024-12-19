@@ -14,7 +14,6 @@ Use this RMD template to complete peer and self evaluations for your final proje
 
 ## Who are you evaluating?
 Jizhou Cheng
-*Full name of team member you are evaluating, or say "self-evaluation"*
 
 
 ## Evaluation Areas
@@ -23,10 +22,11 @@ Jizhou Cheng
 
 *Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
+I undertook the bulk of the project work, including data cleaning, generating visualizations of eye color, alignment, and gender distribution, and writing the bulk of the report.
 
 
 
@@ -34,10 +34,11 @@ Justification/Examples:
 
 *Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
+I think I excel in team discussions, actively incorporate feedback from team members, and ensure that everyone is involved in the project.
 
 
 
@@ -45,10 +46,11 @@ Justification/Examples:
 
 *Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
+The report chapters I wrote, the charts and presentation materials I produced were clearly structured and well aligned with the project objectives.
 
 
 
@@ -56,11 +58,11 @@ Justification/Examples:
 
 *Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
-
+I always meet deadlines and work efficiently, ensuring projects are completed on time.
 
 
 
@@ -69,22 +71,21 @@ Justification/Examples:
 *Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
+Overall, I am one of the core members of the project. I have worked hard to improve the quality of the project and should be considered an excellent team member.
 
 
 
-
-### Total Score (out of 50): 
+### Total Score (out of 50): 50
 
 
 # Team Member 2
 
 ## Who are you evaluating?
-
-*Full name of team member you are evaluating, or say "self-evaluation"*
+Jiahao Li
 
 
 ## Evaluation Areas
@@ -93,10 +94,10 @@ Justification/Examples:
 
 *Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
-
+Jiahao Li was mainly responsible for conducting the Pearson’s chi-square test, which provided important statistical support for the analysis. He also mainly revised and improved the ReadMe, which was crucial for the in-depth analysis of the project.
 
 
 
@@ -104,33 +105,33 @@ Justification/Examples:
 
 *Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
-
+Jiahao Li demonstrated a supportive attitude within the team, actively participated in discussions, accepted feedback, and provided constructive suggestions when needed.
 
 
 #### 3. Communication Contributions. 
 
 *Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
-
+Jiahao Li communicated clearly in discussions and often made critical suggestions, focusing on the statistical analysis aspects of the code.
 
 
 #### 4. Time Contributions.
 
 *Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.* 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
-
+Jiahao Li completes assigned tasks on time and proactively offers constructive suggestions. His work focuses on specific areas rather than repetitive tasks.
 
 
 
@@ -139,12 +140,12 @@ Justification/Examples:
 *Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
 
 
-Score (out of 10): ___
+Score (out of 10): _10_
 
 Justification/Examples:
 
+Jiahao Li was one of the core members of this mission and his work was very focused. He was an indispensable part of the project, provided key statistical expertise, and his work significantly enhanced the value of the analysis.
 
 
 
-
-### Total Score (out of 50): 
+### Total Score (out of 50): 50
