@@ -72,6 +72,42 @@ cleaned_data <- combined_data %>%
 write.csv(cleaned_data, "~/Downloads/cleaned-comic-characters.csv", row.names = FALSE)
 ```
 
+## Hypothesis Testing Overview
+To analyze the differences between Marvel and DC characters, we conducted Pearson's Chi-squared tests on three key features: sex, alignments, and eyes. The purpose of these tests is to determine whether the distributions of these features are significantly different between the two companies.
+
+Objectives:
+
+For each feature, the objective is to test whether the distributions in Marvel and DC are identical. Specifically, we aim to evaluate whether the likelihood of different categories within each feature is the same for characters from both companies.
+
+Testing Methodology:
+
+1.	Null Hypothesis (H₀): The distributions of the feature (e.g., sex, alignments, eyes) are the same for Marvel and DC characters.
+2.	Alternative Hypothesis (H₁): The distributions of the feature are different for Marvel and DC characters.
+3.	Significance Level: α=0.05
+4.	Test Process:
+
+o	Calculate observed frequencies for each feature in both companies.
+
+o	Perform Pearson's Chi-squared test to compare the distributions.
+
+o	Evaluate the p-value:
+
+-If p-value < 0.05, reject H₀ and conclude that the distributions are significantly different.
+
+-If p-value ≥ 0.05, do not reject H₀ and conclude that the distributions are not significantly different.
+
+Results Summary:
+
+•	Sex: The p-value indicates whether the gender distributions differ significantly.
+
+•	Alignments: The p-value reflects whether the alignment categories (e.g., good, bad, neutral) differ significantly.
+
+•	Eyes: The p-value determines whether the eye color distributions differ significantly.
+
+Key Takeaways:
+
+The Chi-squared test results provide a statistical basis for comparing Marvel and DC characters. A significant result (p-value < 0.05) suggests that the feature's distribution is not identical between the two companies, highlighting potential differences in character design philosophies.
+
 ## Variables of Interest
 
 The three attributes analyzed were: - **Eye Color**: Distribution and comparison of eye colors across Marvel and DC characters. - **Alignment**: Analysis of alignments (Good, Neutral, Evil) for characters in each company. - **Gender**: Examination of gender distributions.
@@ -266,7 +302,11 @@ Marvel demonstrates a greater emphasis on diversity in eye color, alignment, and
 -   Marvel data: [Marvel Wikia](https://marvel.wikia.com/)
 -   DC data: [DC Wikia](https://dc.wikia.com/)
 
-# Appendix
+---
 
-```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
-```
+## Contact
+If you have any questions or are interested in collaboration, please contact me:
+
+- **Email**:  Jizhou Cheng:  [jxc6668@psu.edu](mailto:jxc6668@psu.edu)
+
+- **Email**:  Jiahao Li:  [jzl6917@psu.edu](mailto:jzl6917@psu.edu)
