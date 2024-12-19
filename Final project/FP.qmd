@@ -97,10 +97,42 @@ knitr::kable(eye_distribution, caption = "Eye Color Distribution by Company")
 # Plot eye color with labels
 ggplot(eye_distribution, aes(x = eye, y = count, fill = company)) +
   geom_bar(stat = "identity", position = "dodge") +
-  geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
+  geom_text(aes(label = count), position = position_dodge(width = 0.8), vjust = -0.5, size = 2) +
   labs(title = "Characters with the Most Common Eye Color: Blue Eyes in Marvel and DC", x = "Eye Color", y = "Count") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
+### Chi-Square Test for Eye Color
+
+To determine whether the eye color distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Contingency table for eye color and company
+eye_contingency <- xtabs(~ eye + company, data = cleaned_data)
+
+# Perform chi-square test
+eye_test <- chisq.test(eye_contingency)
+
+# Print results
+eye_test
+
+# Check expected values
+eye_test$expected
+```
+
+#### **Results:**
+
+-   **Chi-Square Statistic**: 387.13
+
+-   **Degrees of Freedom**: 26
+
+-   **p-value**: \< 2.2e-16
+
+#### **Conclusion:**
+
+The p-value is significantly less than 0.05, indicating that the differences in eye color distributions between Marvel and DC are statistically significant. This suggests that the two companies have distinct creative strategies for character eye color, with Marvel showing a broader range of unique eye colors compared to DC.
+
+------------------------------------------------------------------------
 
 ## Alignment Distribution
 
@@ -125,6 +157,38 @@ ggplot(align_distribution, aes(x = align, y = count, fill = company)) +
   labs(title = "Characters with the Most Common Alignment: Bad Characters in Marvel and DC", x = "Alignment", y = "Count")
 ```
 
+### Chi-Square Test for Alignment
+
+To determine whether the alignment distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Contingency table for alignment and company
+align_contingency <- xtabs(~ align + company, data = cleaned_data)
+
+# Perform chi-square test
+align_test <- chisq.test(align_contingency)
+
+# Print results
+align_test
+
+# Check expected values
+align_test$expected
+```
+
+#### **Results:**
+
+-   **Chi-Square Statistic**: 604.86
+
+-   **Degrees of Freedom**: 4
+
+-   **p-value**: \< 2.2e-16
+
+#### **Conclusion:**
+
+The alignment distribution also shows significant differences between Marvel and DC characters. Marvel tends to have more characters with neutral and diverse alignments, while DC shows a stronger focus on traditional "good" and "evil" characters.
+
+------------------------------------------------------------------------
+
 ## Gender Distribution
 
 ### Table: Gender Distribution
@@ -144,33 +208,39 @@ knitr::kable(gender_distribution, caption = "Gender Distribution by Company")
 # Plot gender distribution with labels
 ggplot(gender_distribution, aes(x = sex, y = count, fill = company)) +
   geom_bar(stat = "identity", position = "dodge") +
-  geom_text(aes(label = count), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
+  geom_text(aes(label = count), position = position_dodge(width = 0.6), vjust = -0.5, size = 3) +
   labs(title = "Characters with the Most Common Gender: Male Characters in Marvel and DC", x = "Gender", y = "Count")
 ```
 
-### Chi-Square Test for Alignment
+### Chi-Square Test for Gender
 
-To determine whether the alignment distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
+To determine whether the gender distributions between Marvel and DC are statistically different, we performed a Chi-Square Test.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-# Contingency table for alignment and company
-align_contingency <- xtabs(~ align + company, data = cleaned_data)
+# Contingency table for gender and company
+gender_contingency <- xtabs(~ sex + company, data = cleaned_data)
 
 # Perform chi-square test
-align_test <- chisq.test(align_contingency)
+gender_test <- chisq.test(gender_contingency)
 
 # Print results
-align_test
+gender_test
 
 # Check expected values
-align_test$expected
+gender_test$expected
 ```
 
-**Results**: - **Chi-Square Statistic**: ( X\^2 = 604.86 )\
-- **Degrees of Freedom**: 4\
-- **p-value**: ( \< 2.2e-16 )
+#### **Results:**
 
-**Conclusion**: Since the p-value is extremely small, we reject the null hypothesis. The alignment distributions between Marvel and DC characters are statistically significant.
+-   **Chi-Square Statistic**: 255.67
+
+-   **Degrees of Freedom**: 6
+
+-   **p-value**: \< 2.2e-16
+
+#### **Conclusion:**
+
+The gender distribution analysis reveals significant statistical differences between Marvel and DC. While both companies have a predominance of male characters, Marvel includes slightly more non-binary and diverse gender representations than DC.
 
 # Summary and Conclusions
 
