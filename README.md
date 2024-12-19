@@ -266,7 +266,10 @@ Marvel demonstrates a greater emphasis on diversity in eye color, alignment, and
 -   Marvel data: [Marvel Wikia](https://marvel.wikia.com/)
 -   DC data: [DC Wikia](https://dc.wikia.com/)
 
-# Appendix
+---
 
-```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
-```
+## Contact
+If you have any questions or are interested in collaboration, please contact me:
+
+- **Email**:Jizhou Cheng:[jxc6668@psu.edu](mailto:jxc6668@psu.edu)
+
